@@ -42,8 +42,8 @@ greet(person1);
 # DOM Manipulation Exercises
 
 ## Exercise 3
-There are 4 divs on index.html, the first being the one on the left, and the fourth on the right.
-After every 10 seconds, change its color to a random color.
+There are 3 divs on index.html, the first being the one on the left, and the third on the right.
+After every 10 seconds, change the color of the first div to a random color.
 
 ## Exercise 4
 Make the 2nd div disappear after 5 seconds.
