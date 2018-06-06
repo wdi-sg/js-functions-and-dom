@@ -3,7 +3,23 @@
 var testArray = [1, [2, 3], [4, [5], 6]];
 
 var flatten = function(arr) {
+  var newArr = arr.splice(0);
+  result = [];
 
+  while (newArr.length > 0) {
+
+    if(newArr[0].constructor === Array) {
+      for(i=0; i<newArr[0].length; i++) {
+        result.push(newArr[0][i]);
+      };
+      newArr.splice(0,1);
+    } else {
+      result.push(newArr[0]);
+      newArr.splice(0,1);
+    };
+  };
+
+  return result;
 }
 
 var result = flatten(testArray);
@@ -26,9 +42,76 @@ var greet = function(person) {
 };
 greet(person1);
 
-// Explanation: 
-// Write your correct code below.
+// Explanation:
+// there is no simple/straightforward way to check for object equality/equivalence in JS
 
+// Write your correct code below.
+var greet2 = function(person) {
+    if (person.name === "Alan") {
+        console.log("Hello, Alan!");
+    } else {
+        console.log("Hi, Amy!");
+    };
+};
+greet2(person1);
 
 // DOM Manipulation Exercises: Write your code below for the next section.
 
+$(document).ready(function() {
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    };
+    return color;
+  };
+
+  setInterval(function() {
+    $("#one").css("background-color", getRandomColor());
+    $("#two").css("background-color", getRandomColor());
+    $("#three").css("background-color", getRandomColor());
+  }, 100);
+
+  $("#two").delay(5000).fadeOut(1000, function() {
+    $(this).delay(3000).fadeIn(1000);
+  });
+
+  $("#three").append("<span id='number'>0</span>");
+
+  setInterval(function() {
+    if ( $('#two').is(":visible") ) {
+      var num = parseInt( $('#number').text() );
+      num += 1;
+      $("#number").text(num);
+    }
+  }, 500);
+
+  setTimeout(function() {
+    var allListItems = $("li");
+
+    for(i=0; i < allListItems.length; i++) {
+      if(i % 2 === 1) {
+        $(allListItems[i]).css("color", "red");
+      };
+    };
+  }, 4000);
+
+  setTimeout(function() {
+    $(".simple").css("color", "blue");
+  }, 6000);
+
+  var j = 0;
+
+  setInterval(function() {
+    var allListItems = $("li");
+
+    if( $(allListItems[j]).hasClass('simple') === false ) {
+      $(allListItems[j]).css("color", "red");
+    };
+
+    j += 1;
+    
+  }, 1000);
+
+});
