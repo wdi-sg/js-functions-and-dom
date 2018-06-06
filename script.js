@@ -30,55 +30,5 @@ greet(person1);
 // Write your correct code below.
 
 
-// DOM Manipulation Exercises
+// DOM Manipulation Exercises: Write your code below for the next section.
 
-// Exercise 3
-// There are 3 divs on index.html, the first being the one on the left, and the third being on the right..
-// When the user clicks on the first div, change its color to a random color.
-// Bonus: Make it continuously change to random colors once the user's mouse hovers over it.
-
-
-
-
-
-
-
-
-// Exercise 4
-// When the user clicks on the second div, make it disappear after 5 seconds.
-// Bonus: Make it reappear after 3 further seconds.
-// Bonus: Make it so that when it disappears, it does not cause the other div elements to move. Hint: There are at least 2 ways to make something effectively invisible - changing its display setting, and changing its visibility setting. They both have different side effects.
-
-
-
-
-
-
-// Exercise 5
-// The third div should contain a number that increments by 1 every 0.5 seconds.
-// Make it so that clicking on the div decreases the number by 1.
-// Bonus: Make it so that the user cannot decrease the number by more than 2 per 0.5 seconds via clicking.
-
-
-
-
-
-
-
-
-
-
-
-// There is an unordered list with some elements.
-
-// Exercise 6
-// Make the even-numbered list elements turn red 4 seconds after the document loads.
-// The list elements with a class of simple should turn blue 6 seconds after the document loads.
-
-
-
-
-
-
-// Exercise 7
-// When the user clicks on one list element, the NEXT element down the list turns gray.
