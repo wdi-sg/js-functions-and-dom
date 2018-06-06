@@ -43,12 +43,10 @@ greet(person1);
 
 ## Exercise 3
 There are 4 divs on index.html, the first being the one on the left, and the fourth on the right.
-When the user clicks on the first div, change its color to a random color.
-
-_Bonus: Make it continuously change to random colors once the user's mouse hovers over it._
+After every 10 seconds, change its color to a random color.
 
 ## Exercise 4
-When the user click on the second div, make it disappear after 5 seconds.
+Make the 2nd div disappear after 5 seconds.
 
 _Bonus: Make it reappear after 3 further seconds._
 
@@ -56,13 +54,17 @@ _Bonus: Make it so that when it disappears, it does not cause the other div elem
 
 ## Exercise 5
 The third div should contain a number that increments by 1 every 0.5 seconds.
-Make it so that clicking on the div decreases the number by 1.
-_Bonus: Make it so that the user cannot decrease the number by more than 2 per 0.5 seconds via clicking._
+
+_Bonus: Make it so that the number does not increment as long as the 2nd div is not displayed/visible._
 
 ## Exercise 6
 There is an unordered list with some elements.
 Make the even-numbered list elements turn red 4 seconds after the document loads.
 The list elements with a class of simple should turn blue 6 seconds after the document loads.
 
+_Hint: You can select more than one element with `document.querySelectorAll()`._
+
 ## Exercise 7
-When the user clicks on one list element, the NEXT element down the list turns gray.
+Make the font color of the first list element red after 1 second. After every second, make the next list element red, as long as its class is not "simple". When a list element is made red, the color of the previous list element should be reset to black.
+
+_Bonus: Write your code in such a way that it still works as expected when the classes of the list elements are changed via the console while the page is loaded._
